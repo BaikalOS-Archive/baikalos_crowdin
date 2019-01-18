@@ -1,0 +1,31 @@
+BaikalOS crowdin sync scripts
+=============================
+
+Introduction
+------------
+This script is used to synchronize BaikalOS' translations with Crowdin's. Also, it can handle
+automatic commiting to Github and pushing/downloading to/from Crowdin.
+
+Prerequisites
+-------------
+The Java variant of crowdin is required for this to work.
+
+    wget -qO - https://artifacts.crowdin.com/repo/GPG-KEY-crowdin | sudo apt-key add -
+    echo 'deb https://artifacts.crowdin.com/repo/deb/ /' | sudo tee /etc/apt/sources.list.d/crowdin.list > /dev/null
+    sudo apt-get update && sudo apt-get install crowdin
+
+python-git is used for Git integration.
+
+    sudo apt-get install python-git
+
+* Copy config/<baikalos_branch>.yaml to ROM_ROOT_DIR/baikalos_crowdin/config
+* Create ~/crowdin_key.sh with content "export BAIKALOS_CROWDIN_API_KEY=123456.....crowdin_api_key....0"
+* Copy *.sh to ROM_ROOT_DIR
+
+Executing
+---------
+Execute:
+
+    ./crowdin_download.sh - to download all translation from crowdin, commit and push them to github
+    ./crowdin_upload.sh - upload files to crowdin
+

@@ -1,0 +1,252 @@
+# pi.yml
+#
+# Crowdin configuration file for BaikalOS
+#
+
+# Your crowdin's credentials
+project_identifier: "baikalos"
+api_key: "9f1b09d48e4b145ff5aa2e5c55c8f553"
+base_path: "/opt/ssd/baikal9"
+base_path_contains_branch_subfolders: true
+preserve_hierarchy: true
+
+files:
+# Frameworks
+
+  # frameworks-res
+  -
+    source:      '/frameworks/base/core/res/res/values/*_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: &anchor
+      android_code:
+      # we need this mapping since Crowdin expects directories
+      # to be named like "values-uk-rUA"
+      # acording to specification instead of just "uk"
+        af: af
+        am: am
+        ar: ar
+        as: as-rIN
+        ast: ast-rES
+        az: az-rAZ
+        be: be-rBY
+        bg: bg
+        bn: bn-rBD
+        bs: bs-rBA
+        ca: ca
+        cs: cs
+        cy: cy
+        da: da
+        de: de
+        el: el
+        en-AU: en-rAU
+        en-GB: en-rGB
+        en-IN: en-rIN
+        en-PT: en-rPT
+        eo: eo
+        es-ES: es
+        es-MX: es-rMX
+        es-US: es-rUS
+        et: et-rEE
+        eu: eu-rES
+        fa: fa
+        fi: fi
+        fr: fr
+        fr-CA: fr-rCA
+        fy-NL: fy-rNL
+        gl: gl-rES
+        gu-IN: gu-rIN
+        he: iw
+        hi: hi
+        hr: hr
+        hu: hu
+        hy-AM: hy-rAM
+        id: in
+        is: is-rIS
+        it: it
+        ja: ja
+        ka: ka-rGE
+        kk: kk-rKZ
+        km: km-rKH
+        kn: kn-rIN
+        ko: ko
+        ku: ku
+        ky: ky-rKG
+        lb: lb
+        lo: lo-rLA
+        lt: lt
+        lv: lv
+        mk: mk-rMK
+        ml-IN: ml-rIN
+        mn: mn-rMN
+        mr: mr-rIN
+        ms: ms-rMY
+        my: my-rMM
+        nb: nb
+        ne-NP: ne-rNP
+        nl: nl
+        or: or-rIN
+        pa-IN: pa-rIN
+        pl: pl
+        pt-PT: pt-rPT
+        pt-BR: pt-rBR
+        rm-CH: rm
+        ro: ro
+        ru: ru
+        si-LK: si-rLK
+        sk: sk
+        sl: sl
+        sq: sq-rAL
+        sr: sr
+        sv-SE: sv
+        sw: sw
+        ta: ta-rIN
+        te: te-rIN
+        th: th
+        tl: tl
+        tr: tr
+        ug: ug
+        uk: uk
+        ur-PK: ur-rPK
+        uz: uz-rUZ
+        vi: vi
+        zh-CN: zh-rCN
+        zh-HK: zh-rHK
+        zh-TW: zh-rTW
+        zu: zu
+  -
+  # frameworks packages res
+    # SystemUI
+    source:      '/frameworks/base/packages/SystemUI/res/values/*_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: &anchor
+      android_code:
+      # we need this mapping since Crowdin expects directories
+      # to be named like "values-uk-rUA"
+      # acording to specification instead of just "uk"
+        af: af
+        am: am
+        ar: ar
+        as: as-rIN
+        ast: ast-rES
+        az: az-rAZ
+        be: be-rBY
+        bg: bg
+        bn: bn-rBD
+        bs: bs-rBA
+        ca: ca
+        cs: cs
+        cy: cy
+        da: da
+        de: de
+        el: el
+        en-AU: en-rAU
+        en-GB: en-rGB
+        en-IN: en-rIN
+        en-PT: en-rPT
+        eo: eo
+        es-ES: es
+        es-MX: es-rMX
+        es-US: es-rUS
+        et: et-rEE
+        eu: eu-rES
+        fa: fa
+        fi: fi
+        fr: fr
+        fr-CA: fr-rCA
+        fy-NL: fy-rNL
+        gl: gl-rES
+        gu-IN: gu-rIN
+        he: iw
+        hi: hi
+        hr: hr
+        hu: hu
+        hy-AM: hy-rAM
+        id: in
+        is: is-rIS
+        it: it
+        ja: ja
+        ka: ka-rGE
+        kk: kk-rKZ
+        km: km-rKH
+        kn: kn-rIN
+        ko: ko
+        ku: ku
+        ky: ky-rKG
+        lb: lb
+        lo: lo-rLA
+        lt: lt
+        lv: lv
+        mk: mk-rMK
+        ml-IN: ml-rIN
+        mn: mn-rMN
+        mr: mr-rIN
+        ms: ms-rMY
+        my: my-rMM
+        nb: nb
+        ne-NP: ne-rNP
+        nl: nl
+        or: or-rIN
+        pa-IN: pa-rIN
+        pl: pl
+        pt-PT: pt-rPT
+        pt-BR: pt-rBR
+        rm-CH: rm
+        ro: ro
+        ru: ru
+        si-LK: si-rLK
+        sk: sk
+        sl: sl
+        sq: sq-rAL
+        sr: sr
+        sv-SE: sv
+        sw: sw
+        ta: ta-rIN
+        te: te-rIN
+        th: th
+        tl: tl
+        tr: tr
+        ug: ug
+        uk: uk
+        ur-PK: ur-rPK
+        uz: uz-rUZ
+        vi: vi
+        zh-CN: zh-rCN
+        zh-HK: zh-rHK
+        zh-TW: zh-rTW
+        zu: zu
+
+# Packages
+
+  # BaikalOSExtras
+  -
+    source:      '/packages/apps/BaikalOSExtras/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/packages/apps/BaikalOSExtras/res/values/*_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+  # Settings
+  -
+    source:      '/packages/apps/Settings/res/values/*_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# Services
+
+# Vendor
+
+# Device specific
+  -
+    source:      '/device/leeco/msm8996-common/parts/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/device/xiaomi/msm8998-common/parts/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+  -
+    source:      '/device/xiaomi/sdm845-common/parts/res/values/*strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
